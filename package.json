@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxtail-template",
   "type": "module",
   "private": true,
   "scripts": {
@@ -7,7 +7,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "add-component": "node scripts/add.js",
+    "add-composable": "node scripts/add.js --composable",
+    "vuetail:verify": "node scripts/add.js verify",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "test": "vitest",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@nuxt/icon": "2.2.1",
@@ -15,9 +22,25 @@
     "@nuxtjs/seo": "5.1.3",
     "@pinia/nuxt": "0.11.3",
     "@tailwindcss/vite": "^4.2.4",
+    "@unhead/dom": "^3.0.5",
+    "@unhead/vue": "^3.0.5",
+    "@vueuse/core": "^13.1.0",
+    "axios": "^1.8.4",
+    "date-fns": "^4.1.0",
+    "motion-v": "^1.6.1",
     "nuxt": "^4.4.2",
+    "pinia": "^3.0.1",
+    "playwright-core": "^1.59.1",
     "tailwindcss": "^4.2.4",
+    "unhead": "^3.0.5",
     "vue": "^3.5.32",
-    "vue-router": "^5.0.4"
+    "vue-router": "^5.0.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "oxlint": "latest",
+    "typescript": "latest",
+    "vitest": "latest",
+    "vue-tsc": "latest"
   }
 }
